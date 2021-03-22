@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',['as'=>'pages.index','uses'=>'GameController@indexAction' ]);
+Route::get('/play',['as'=>'pages.play','uses'=>'GameController@playGame' ]);
+Route::post('/play',['as'=>'pages.play','uses'=>'GameController@shotAction' ]);
+Route::get('/show',['as'=>'pages.show','uses'=>'GameController@showAction' ]);
+
