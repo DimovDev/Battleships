@@ -10,7 +10,7 @@
             <tr>
                 <th>#</th>
                 @for ($i = 'A'; $i <= 'J'; $i ++)
-                <th>{{$i}}</th>
+                <th class="table-light">{{$i}}</th>
                 @endfor
             </tr>
             </thead>
@@ -38,7 +38,7 @@
             <tbody>
             @foreach($ships as $ship)
             <tr>
-                <td>{{$ship->getName()}}</td>
+                <td>{{$ship->getName()}}<img src="{{asset('/images/Battleship.png')}}" alt="ship" width="64"></td>
                 <td>{{$ship->getLength()}}</td>
             </tr>
             @endforeach
@@ -79,7 +79,6 @@
                                 @if($coordinate===$k.$i )
                                 {{$k++ }}
                                 <td class="text-danger">X</td>
-
                                 @endif
                                 @endforeach
                                 <td></td>
@@ -94,9 +93,9 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-
             </div>
         </div>
     </div>
 </div>
+
 @endsection

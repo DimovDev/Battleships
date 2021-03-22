@@ -14,9 +14,9 @@ function fire(row, col) {
         },
         success: function (data) {
             if(data.hit == true) {
-                $('#'+row+col).removeClass("btn-info").addClass("btn-success").addClass('disabled').attr('disabled', true);
-            } else {
                 $('#'+row+col).removeClass("btn-info").addClass("btn-danger").addClass('disabled').attr('disabled', true);
+            } else {
+                $('#'+row+col).removeClass("btn-info").addClass("btn-secondary").addClass('disabled').attr('disabled', true);
             }
             $('#msg').text(data.message);
 
