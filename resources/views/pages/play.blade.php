@@ -3,10 +3,10 @@
 @section('title') Play @parent @endsection
 
 @section('content')
-<div class="container-fluid d-flex ">
+<div class="container-fluid d-flex flex-wrap justify-content">
     <div class="col-md-8">
-        <table class="table table-bordered table-condensed">
-            <thead>
+        <table class="table table-borderless  table-condensed table-responsive-sm w-auto">
+            <thead class="table-light">
             <tr>
                 <th>#</th>
                 @for ($i = 'A'; $i <= 'J'; $i ++)
@@ -28,7 +28,7 @@
         </table>
     </div>
     <div class="col-md-4">
-        <table class="table table-bordered table-condensed">
+        <table class="table table-bordered table-condensed ">
             <thead>
             <tr>
                 <th>Ship name:</th>
@@ -45,6 +45,7 @@
             </tbody>
         </table>
         <h3 id="msg"></h3>
+        <h3 id="messageShots"></h3>
     </div>
 </div>
 <div class="modal fade" id="showModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"

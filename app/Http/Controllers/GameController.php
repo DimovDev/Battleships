@@ -17,17 +17,12 @@ class GameController extends Controller
     {
         $ships = [
             new Ship('Battleship', 5),
-            new Ship('Destroyer', 4),
-            new Ship('Destroyer', 4)
+            new Ship('Destroyer 1', 4),
+            new Ship('Destroyer 2', 4)
         ];
+        (new Game())->create($ships);
 
-        try {
-            (new Game())->create($ships);
-        } catch (\Exception $e) {
-
-        }
-
-        $this->setSession($ships, 0);
+        $this->setSession($ships, 0, 0);
         $coordinates = [];
         foreach ($ships as $ship) {
             $coordinates[] = $ship->coordinates;
@@ -39,7 +34,7 @@ class GameController extends Controller
             }
         }
 
-        return view("pages.play", compact('ships','mergedCoordinates'));
+        return view("pages.play", compact('ships', 'mergedCoordinates'));
     }
 
 
@@ -50,6 +45,9 @@ class GameController extends Controller
 
         $ships = session('ships');
         $shipsSunk = session('ships_sunk');
+        $shots = session('shots');
+        $shots++;
+        $messageShots = 'Shots ' . $shots . '';
 
         $hit = false;
         $message = 'Miss!';
@@ -69,36 +67,21 @@ class GameController extends Controller
         }
 
 
-        $this->setSession($ships, $shipsSunk);
+        $this->setSession($ships, $shipsSunk, $shots);
 
         if ($totalShips == $shipsSunk) {
-            $message = 'Well done! You completed the game in '. $shots.' shots ';
+            $message = 'Well done! You completed the game in ' . $shots . ' shots! ';
         }
 
-        return response()->json(['hit' => $hit, 'message' => $message]);
+        return response()->json(['hit' => $hit, 'message' => [$message ,$messageShots] ]);
     }
 
-    public function showAction()
-    {
-        $ships = session('ships');
-        $coordinates = [];
-        foreach ($ships as $ship) {
-            $coordinates[] = $ship->coordinates;
-        }
-        $mergedCoordinates = [];
-        foreach ($coordinates as $coordinate) {
-            foreach ($coordinate as $value) {
-                $mergedCoordinates[] = $value;
-            }
-        }
-        dump($mergedCoordinates);
-        return view('pages.show', compact('mergedCoordinates'));
-    }
 
-    protected function setSession($ships, $shipsSunk): void
+    protected function setSession($ships, $shipsSunk, $shots): void
     {
         session(['ships' => $ships]);
         session(['ships_sunk' => $shipsSunk]);
+        session(['shots' => $shots]);
     }
 
 }

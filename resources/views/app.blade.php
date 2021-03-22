@@ -24,9 +24,9 @@
 <body>
 
 <div class="container-fluid">
-    <div class="header clearfix">
+    <div class="header clearfix ">
         @include('partials.nav')
-        <h3 class="text-muted">Battleships</h3>
+<!--        <h3 class="text-muted mx-5">Battleships Game</h3>-->
     </div>
 
     @yield('content')

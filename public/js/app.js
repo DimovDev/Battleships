@@ -1,4 +1,5 @@
 
+
 function fire(row, col) {
     var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
     $.ajax({
@@ -18,6 +19,7 @@ function fire(row, col) {
                 $('#'+row+col).removeClass("btn-info").addClass("btn-danger").addClass('disabled').attr('disabled', true);
             }
             $('#msg').text(data.message);
+
         }
     });
 }
