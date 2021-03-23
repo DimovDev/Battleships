@@ -4,7 +4,7 @@ Laravel Battleship App
 
 Implementation a simple game of battleships http://en.wikipedia.org/wiki/Battleship_(game) which allow a single human player to play a one-sided game of battleships against the computer.
 
-This project was bootstrapped with Laravel 7
+This project was created with Laravel 7, Bootstrap 4, JQuery, Blade Template Engine and AJAX. 
 
 
 Screenshot1
