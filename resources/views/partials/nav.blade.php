@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-expand-md navbar-light bg-light mb-3">
+<nav class="navbar navbar-expand-md navbar-light bg-light mt--2">
     <div class="container-fluid">
         <a href="/" class="navbar-brand mr-3 text-dark ">Battleships Game</a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">

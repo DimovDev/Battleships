@@ -53,7 +53,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Ships positions</h5>
+                <h5 class="modal-title" id="exampleModalLongTitle">Ship positions</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -77,7 +77,7 @@
                                 @for ($k = 'A'; $k <= 'J'; $k ++)
                                 @foreach($mergedCoordinates as $coordinate)
                                 @if($coordinate===$k.$i )
-                                {{$k++ }}
+                              <span class="d-none">{{$k++ }}</span>
                                 <td class="text-danger">X</td>
                                 @endif
                                 @endforeach
