@@ -8,10 +8,10 @@ This project was created with Laravel 7, Bootstrap 4, JQuery, Blade Template Eng
 
 
 Screenshot1
-<p align="center"><a href="https://dimovdev.ml" target="_blank"><img src="https://dimovdev.ml/screenshot1.PNG" width="400"></a></p>
+<p align="center"><a href="https://dimovdev.ml" target="_blank"><img src="https://dimovdev.ml/screenshot1.PNG" width="800"></a></p>
 
 Screenshot2
-<p align="center"><a href="https://dimovdev.ml" target="_blank"><img src="https://dimovdev.ml/screenshot2.PNG" width="400"></a></p>
+<p align="center"><a href="https://dimovdev.ml" target="_blank"><img src="https://dimovdev.ml/screenshot2.PNG" width="800"></a></p>
 
 Below you will find some information about this project
 
