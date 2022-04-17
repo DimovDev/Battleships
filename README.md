@@ -19,9 +19,9 @@ How to start:
 
 1.Clone this repository: git clone https://github.com/DimovDev/Battleships.git 
 
-2.Install all dependencies: composer install
+2.Install all dependencies: `composer install`
 
-3.Start application: php artisan serve
+3.Start application: `php artisan serve`
 
 4.Open in your browser http://localhost:8000/
 
